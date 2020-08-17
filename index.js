@@ -1,6 +1,10 @@
 function fetchBooks() {
-
-}
+  return fetch("https://anapioficeandfire.com/api/books")
+    .then(response => response.json())
+    .then(json => renderBooks(json))
+  //In order to give them access, write your solution so that
+  //fetchBooks() returns the fetch()
+};
 
 function renderBooks(books) {
   const main = document.querySelector('main')
